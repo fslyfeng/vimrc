@@ -32,11 +32,9 @@ function is_exist_file() {
     fi
 }
 # 下载文件
-function linux_download_file(){
+function linux_download_file() {
     git clone https://github.com/fslyfeng/vimrc.git \
         ~/vimrc
-
-    cd ~/vimrc
 }
 # 判断目录是否存在
 function is_exist_dir() {
@@ -171,8 +169,8 @@ function install_prepare_software_on_debian() {
 
 # 拷贝文件
 function copy_files() {
+    cd ~/vimrc
     mkdir ~/.vim
-    rm -rf ~/.vim/colors
     cp -R ${PWD}/colors ~/.vim
 
     rm -rf ~/.vim/.vimrc
@@ -250,7 +248,7 @@ function get_now_timestamp() {
 # main函数
 function main() {
     begin=$(get_now_timestamp)
-:
+    :
     type=$(get_platform_type)
     echo "Platform type: "${type}
 
