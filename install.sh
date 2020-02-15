@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
 
 # 获取平台类型，mac还是linux平台
 function get_platform_type() {
@@ -29,7 +31,13 @@ function is_exist_file() {
         echo 0
     fi
 }
+# 下载文件
+function linux_download_file(){
+    git clone https://github.com/fslyfeng/vimrc.git \
+        ~/vimrc
 
+    cd ~/vimrc
+}
 # 判断目录是否存在
 function is_exist_dir() {
     dir=$1
@@ -212,6 +220,7 @@ function begin_install_vimplus() {
 function install_vimplus_on_debian() {
     backup_vimrc_and_vim
     install_prepare_software_on_debian
+    linux_download_file
     begin_install_vimplus
 }
 
