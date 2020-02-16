@@ -16,13 +16,13 @@ set showcmd              " select模式下显示选中的行数
 set ruler                " 总是显示光标位置
 set laststatus=2         " 总是显示状态栏
 set number               " 开启行号显示
-"set cursorline           " 高亮显示当前行
+set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set scrolloff=3          " 光标移动到buffer的顶部和底部时保持3行距离
 set showmatch            " 高亮显示对应的括号
 set matchtime=5          " 对应括号高亮的时间（单位是十分之一秒）
-"set relativenumber       " 绝对行号
+set relativenumber       " 绝对行号
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,12 +100,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'chxuan/change-colorscheme'
 
-" 加载自定义插件
-if filereadable(expand($HOME . '/.vim/.vimrc.custom.plugins'))
-    source $HOME/.vim/.vimrc.custom.plugins
-endif
 call plug#end()
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "主键配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -197,9 +192,4 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1 
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
-
-" 加载自定义配置
-if filereadable(expand($HOME . '/.vim/.vimrc.custom.config'))
-    source $HOME/.vim/.vimrc.custom.config
-endif
 
