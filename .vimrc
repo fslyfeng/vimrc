@@ -19,7 +19,7 @@ set number               " 开启行号显示
 set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
-set scrolloff=3          " 光标移动到buffer的顶部和底部时保持3行距离
+set scrolloff=5          " 光标移动到buffer的顶部和底部时保持3行距离
 set showmatch            " 高亮显示对应的括号
 set matchtime=5          " 对应括号高亮的时间（单位是十分之一秒）
 set relativenumber       " 绝对行号
