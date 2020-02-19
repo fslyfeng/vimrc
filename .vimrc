@@ -94,11 +94,28 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
+" 模糊查找
+Plug 'Yggdroot/LeaderF'
+" 自动配对符号
+Plug 'jiangmiao/auto-pairs'
+"状态栏美化
+Plug 'vim-airline/vim-airline' 
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
+"文件管理
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+"快捷注释
 Plug 'tpope/vim-commentary'
+"主题更换
 Plug 'chxuan/change-colorscheme'
+"vim字体图标
+Plug 'ryanoasis/vim-devicons'
+"git应用相关
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+"快带移动
+Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -193,3 +210,8 @@ let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
+" vim-smooth-scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
