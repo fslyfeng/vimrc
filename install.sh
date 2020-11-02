@@ -79,7 +79,7 @@ function install_prepare_software_on_mac() {
 # 安装debian必备软件
 function install_prepare_software_on_debian() {
     sudo apt-get update
-    sudo apt-get install -y git curl vim
+    sudo apt-get install -y git curl vim python
 }
 
 # 下载文件
