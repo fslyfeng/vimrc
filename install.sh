@@ -79,6 +79,7 @@ function install_prepare_software_on_mac() {
 # 安装debian必备软件
 function install_prepare_software_on_debian() {
     sudo apt-get update
+    sudo apt-get install python3 python3-distutils python-dev python3-dev  build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
     sudo apt-get install -y git curl vim
 }
 
